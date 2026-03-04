@@ -1,48 +1,34 @@
-💱 Konversi Mata Uang – Java GUI
+# 💱 Currency Converter - Java Swing
 
-Aplikasi konversi mata uang berbasis Java Swing dengan tampilan GUI modern menggunakan JTabbedPane.
-Program dapat melakukan konversi antar mata uang serta menampilkan informasi kurs terhadap IDR.
+Aplikasi konversi mata uang sederhana berbasis **Java Swing** dengan konsep **Object Oriented Programming (OOP)**.
 
-🖼 Tampilan Aplikasi
-🔹 Tab Konversi
+---
 
-Fitur:
+## 📌 Features
 
-Input jumlah uang
+- Konversi mata uang:
+  - IDR
+  - USD
+  - EUR
+  - MYR
+- Custom icon pada dropdown mata uang
+- Clean & simple GUI
+- Pemisahan logic dan tampilan (OOP)
+- Struktur package terorganisir
 
-Pilih mata uang asal dan tujuan
+---
 
-Ikon bendera otomatis muncul
+## 🛠 Tech Stack
 
-Hasil konversi ditampilkan dengan format rapi
+- Java 17+
+- Java Swing (GUI)
+- OOP Concept
 
-🔹 Tab Info Kurs
+---
 
-Fitur:
+## 📂 Project Structure
 
-Menampilkan kurs terhadap IDR
-
-Pilih mata uang untuk melihat nilai tukarnya
-
-Tampilan bendera ukuran besar
-
-✨ Fitur Utama
-
-GUI berbasis Java Swing
-
-JTabbedPane (2 Tab)
-
-Custom Renderer untuk ikon di ComboBox
-
-Singleton Pattern pada class Fungsi
-
-Pemisahan logika konversi di Fungsi2
-
-Resource loading menggunakan getResource()
-
-Format angka menggunakan DecimalFormat
-
-📂 Struktur Project
+```text
 src/
 └── projek/
     ├── Main.java
@@ -51,35 +37,57 @@ src/
     ├── Fungsi2.java
     ├── ikon.java
     └── img/
+        ├── idr.png
+        ├── usd.png
+        ├── eur.png
+        └── myr.png
+```
 
-Folder img berisi ikon bendera yang digunakan pada aplikasi.
+---
 
-🚀 Cara Menjalankan
+## 🧠 Architecture Overview
 
-Clone atau Download ZIP dari GitHub
+- **Main.java** → Entry point aplikasi
+- **gui.java** → Tampilan dan event handling
+- **Fungsi.java** → Data nilai kurs (logic)
+- **Fungsi2.java** → Perhitungan konversi
+- **ikon.java** → Custom ListCellRenderer untuk icon mata uang
 
-Buka di IDE (VS Code / IntelliJ / NetBeans / Eclipse)
+---
 
-Jalankan Main.java
+## 🖼 Resource Handling
 
-💰 Mata Uang yang Didukung
+Gambar mata uang disimpan di:
 
-IDR
+```
+projek/img/
+```
 
-USD
+Icon dimuat menggunakan:
 
-EUR
+```java
+new ImageIcon("/projek/img/idr.png");
+```
 
-MYR
+---
 
-👨‍💻 Tujuan Project
+## ▶️ How To Run
 
-Project ini dibuat untuk mengimplementasikan:
+1. Buka project di IDE (IntelliJ / NetBeans / Eclipse)
+2. Pastikan folder `img` berada dalam package `projek`
+3. Jalankan `Main.java`
 
-GUI Java
+---
 
-Konsep OOP
+## 🎯 Concept Applied
 
-Pemisahan logika program
+- Object Oriented Programming
+- Encapsulation
+- Separation of Concern
+- Custom Renderer (Swing)
 
-Penggunaan resource dalam project Java
+---
+
+## 📄 Author
+
+Project dibuat untuk tugas akhir PBO (Pemrograman Berorientasi Objek).
